@@ -1,17 +1,16 @@
-# "Titulo"
+# "Count A,T,G,C"
 
-Fecha: --/--/----
+Fecha: 21/03/2024
 
 **Participantes**:
 
 - Jordi Garcia Garces <email:jordigg@lcg.unam.mx>
 
 ## Descripcion del Problema
-
+Cuenta las ocurrencias de los símbolos "A","T","G","C" de una cadena de DNA que lea a través de un archivo. 
 
 
 ## Especificacion de Requisitos
-
 Requisitos funcionales
 
 -
