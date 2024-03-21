@@ -1,4 +1,4 @@
-# Nombre del Proyecto
+# Count A,T,G,C
 
 Este es un script de Python diseñado para...
 
