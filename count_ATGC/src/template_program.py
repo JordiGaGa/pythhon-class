@@ -1,14 +1,14 @@
 '''
-NAME: 
+NAME: Contador de A,T,G,C
        
 
-VERSION:
+VERSION: 1.0
         
 
 AUTHOR: JORDI GARCIA GARCES
         
 
-DESCRIPTION: 
+DESCRIPTION: Programa para contar el numero de cada base nitrgoenada en archivo .txt
         
 
 CATEGORY
@@ -19,7 +19,7 @@ USAGE
     % python programName [-parameters] [value]
     
 
-ARGUMENTS
+ARGUMENTS 
 
 
 METHOD

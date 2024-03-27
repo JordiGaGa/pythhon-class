@@ -1,15 +1,15 @@
-# Count A,T,G,C
+# Contador A,T,G,C
 
-Este es un script de Python diseñado para...
+Este es un script de Python diseñado para entender el funcionamiento del porgama de Contador de A,T,G,C
 
 ## Uso
 
-El script acepta...
+El script recibirá una archivo .txt con la secuencia de bases nitrogenadas.
 
 
 ## Salida
 
-El script imprimira ... en la consola.
+El script imprimirá la cantidad que hay de cada tipo de base en la secuencia en la consola.
 
 ## Control de errores
 
@@ -25,7 +25,7 @@ codigo pruebas
 
 ## Datos
 
-El script esta creado para operar en archivos...
+El script esta creado para operar en archivos .txt
 
 ## Metadatos y documentacion
 

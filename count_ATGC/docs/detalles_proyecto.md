@@ -25,21 +25,22 @@ Requisitos no funcionales:
 A continuación, se muestra un pseudocódigo simple para ilustrar la logica básica del script:
 
 ```
-A = 0
-T = 0
-G = 0
-C = 0
-for base in string: #Siendo "string" el nombre con el que se lee el archivo.
-  if base == "A":
-    A += 1
-  if base == "T":
-    T += 1
-  if base == "G":
-    G += 1
-  if base == "C":
-    C += 1
-
-print(f"El numero de bases son:\nA:{A}\nT:{T}\nG:{G}\nC:{C}")
+with open("Secuencia.txt","r") as string: #Aqui subimos el archivo y lo llamamos "string"
+  sec = str(string.readline()) #Convertimos el archivo a una string llamada "sec"
+  A = 0
+  T = 0
+  G = 0
+  C = 0
+  for base in sec:
+    if base == "A":
+      A += 1
+    if base == "T":
+      T += 1
+    if base == "G":
+      G += 1
+    if base == "C":
+      C += 1
+  print(f"El numero de bases son:\nA:{A}\nT:{T}\nG:{G}\nC:{C}")
 ```
 
 "Se introduce archivo.txt con la secuencia de bases nitrogenadas esctritas como "A", "T", "G" o "C" y se regresa la cantidad de cada una de las bases presentes en la secuencia. 
