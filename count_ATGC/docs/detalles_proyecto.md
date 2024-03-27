@@ -11,27 +11,35 @@ Cuenta las ocurrencias de los símbolos "A","T","G","C" de una cadena de DNA que
 
 
 ## Especificacion de Requisitos
-Requisitos funcionales
+Requisitos funcionales:
+
+- Archivo .txt con secuencia de bases nitrogenadas representadas por los caracteres "A", "T", "G" o "C".
+
+Requisitos no funcionales:
 
 -
 
-Requisitos no funcionales
+## Análisis y Esquema
 
--
-
-
-
-## Analisis y Esquema
-
-
-
-"Como se resolvio el problema y que se uso"
-A continuacion, se muestra un pseudocodigo simple para ilustrar la logica básica del script:
+"Cómo se resolvió el problema y qué se usó"
+A continuación, se muestra un pseudocódigo simple para ilustrar la logica básica del script:
 
 ```
+A = 0
+T = 0
+G = 0
+C = 0
+for base in string: #Siendo "string" el nombre con el que se lee el archivo.
+  if base == "A":
+    A += 1
+  if base == "T":
+    T += 1
+  if base == "G":
+    G += 1
+  if base == "C":
+    C += 1
 
-"Código"
-
+print(f"El numero de bases son:\nA:{A}\nT:{T}\nG:{G}\nC:{C}")
 ```
 
 "Se introduce archivo.txt con la secuencia de bases nitrogenadas esctritas como "A", "T", "G" o "C" y se regresa la cantidad de cada una de las bases presentes en la secuencia. 
