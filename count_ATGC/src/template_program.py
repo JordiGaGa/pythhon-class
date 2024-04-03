@@ -27,9 +27,7 @@ METHOD
 
 SEE ALSO
 
-
-        
-'''
+# ===========================================================================
 
 from google.colab import files
 
@@ -51,5 +49,5 @@ with open("Secuencia.txt","r") as string: #Aqui subimos el archivo y lo llamamos
     if base == "C":
       C += 1
   print(f"El numero de bases son:\nA:{A}\nT:{T}\nG:{G}\nC:{C}") 
-  '''
 
+# ===========================================================================
