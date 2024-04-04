@@ -29,9 +29,10 @@ SEE ALSO
 
 import argporse
 parser = argparse.ArgumentParser(description = "contador ATGC")
-parser.add_argument("archivo.txt", type=str, required = True)
+parser.add_argument("archivo.txt", type=str)
+args = parser.parse_args()
 
-with open("Secuencia.txt","r") as string: #Aqui subimos el archivo y lo llamamos "string"
+with open("archivo.txt","r") as string: #Aqui subimos el archivo y lo llamamos "string"
   sec = str(string.readline()) #Convertimos el archivo a una string llamada "sec"
   A = 0
   T = 0
