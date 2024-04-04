@@ -1,4 +1,4 @@
-'''
+"""
 NAME: contador_ATGC
        
 
@@ -26,26 +26,27 @@ METHOD
 
 
 SEE ALSO
+"""
 
-import argporse
-parser = argparse.ArgumentParser(description = "contador ATGC")
-parser.add_argument("archivo.txt", type=str)
+import argparse
+parser = argparse.ArgumentParser(description="contador ATGC")
+parser.add_argument("input_file", type=str, help="..")
 args = parser.parse_args()
 
-with open("archivo.txt","r") as string: #Aqui subimos el archivo y lo llamamos "string"
-  sec = str(string.readline()) #Convertimos el archivo a una string llamada "sec"
-  A = 0
-  T = 0
-  G = 0
-  C = 0
-  for base in sec:
-    if base == "A":
-      A += 1
-    if base == "T":
-      T += 1
-    if base == "G":
-      G += 1
-    if base == "C":
-      C += 1
-  print(f"El numero de bases son:\nA:{A}\nT:{T}\nG:{G}\nC:{C}") 
-
+with open(args.input_file, "r") as string:  # Aqui subimos el archivo y lo llamamos "string"
+    # Convertimos el archivo a una string llamada "sec"
+    sec = str(string.readline())
+    A = 0
+    T = 0
+    G = 0
+    C = 0
+    for base in sec:
+        if base == "A":
+            A += 1
+        if base == "T":
+            T += 1
+        if base == "G":
+            G += 1
+        if base == "C":
+            C += 1
+    print(f"El numero de bases son:\nA:{A}\nT:{T}\nG:{G}\nC:{C}")
