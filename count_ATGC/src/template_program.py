@@ -1,5 +1,5 @@
 '''
-NAME: Contador de A,T,G,C
+NAME: contador_ATGC
        
 
 VERSION: 1.0
@@ -16,7 +16,7 @@ CATEGORY
 
 USAGE
 
-    % python programName [-parameters] [value]
+    python contador_ATGC [-parameters] [value]
     
 
 ARGUMENTS 
@@ -27,6 +27,9 @@ METHOD
 
 SEE ALSO
 
+import argporse
+parser = argparse.ArgumentParser(description = "contador ATGC")
+parser.add_argument("archivo.txt", type=str, required = True)
 
 with open("Secuencia.txt","r") as string: #Aqui subimos el archivo y lo llamamos "string"
   sec = str(string.readline()) #Convertimos el archivo a una string llamada "sec"
