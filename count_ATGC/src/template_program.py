@@ -27,11 +27,6 @@ METHOD
 
 SEE ALSO
 
-# ===========================================================================
-
-from google.colab import files
-
-upload = files.upload()
 
 with open("Secuencia.txt","r") as string: #Aqui subimos el archivo y lo llamamos "string"
   sec = str(string.readline()) #Convertimos el archivo a una string llamada "sec"
@@ -50,4 +45,3 @@ with open("Secuencia.txt","r") as string: #Aqui subimos el archivo y lo llamamos
       C += 1
   print(f"El numero de bases son:\nA:{A}\nT:{T}\nG:{G}\nC:{C}") 
 
-# ===========================================================================
