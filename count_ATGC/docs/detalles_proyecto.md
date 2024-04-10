@@ -63,5 +63,9 @@ Entra documento ---> Lee cada uno de los caracteres ---> Regresa cantidad de bas
 	4. El sistema muestra el resultado.
 	
 - **Flujos alternativos**: "Excepciones"
+        1. If a file is not provided, the program should print an error message to the screen.
+        2. ...
+        ...
+   
 
                 
