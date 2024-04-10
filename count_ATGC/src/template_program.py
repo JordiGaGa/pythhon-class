@@ -50,3 +50,9 @@ with open(args.input_file, "r") as string:  # Aqui subimos el archivo y lo llama
         if base == "C":
             C += 1
     print(f"El numero de bases son:\nA:{A}\nT:{T}\nG:{G}\nC:{C}")
+
+# No es necesario que conviertas tu variable a string, puedes simplemente hacerlo de la siguiente manera:
+with open(args.input_file, "r") as file:
+    DNA = file.read()
+print(f"El total por base es: A:{ADN.count('A')} C:{ADN.count('C')} T:{ADN.count('T')} G:{ADN.count('G')}")
+       
