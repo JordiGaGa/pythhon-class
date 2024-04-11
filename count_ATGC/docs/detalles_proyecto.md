@@ -15,8 +15,7 @@ Requisitos funcionales:
 
 - Leer las letras A,T,G,C de un archivo dado en formato de string. 
 - Calcular la cantidad de bases que se repiten de cada tipo.
-
-- Archivo .txt con secuencia de bases nitrogenadas representadas por los caracteres "A", "T", "G" o "C".
+- Desplegar el resultado en forma de texto con las cifras y la respectiva base.
 
 Requisitos no funcionales:
 - Si quieres que te regrese una base en especifico poner: --base X (siendo X A,T,G o C).
@@ -25,26 +24,55 @@ Requisitos no funcionales:
 
 ## Análisis y Esquema
 
-"Cómo se resolvió el problema y qué se usó"
+Para este problema se usaron ciertas funciones de python, así como el establecer los parámetros para poder validar el archivo y la salida. 
 A continuación, se muestra un pseudocódigo simple para ilustrar la logica básica del script:
 
 ```
-with open("Secuencia.txt","r") as string: #Aqui subimos el archivo y lo llamamos "string"
-  sec = str(string.readline()) #Convertimos el archivo a una string llamada "sec"
-  A = 0
-  T = 0
-  G = 0
-  C = 0
-  for base in sec:
-    if base == "A":
-      A += 1
-    if base == "T":
-      T += 1
-    if base == "G":
-      G += 1
-    if base == "C":
-      C += 1
-  print(f"El numero de bases son:\nA:{A}\nT:{T}\nG:{G}\nC:{C}")
+import argparse
+# Programa
+parser = argparse.ArgumentParser(description="contador ATGC")
+# Archivo como parametro obligatorio
+parser.add_argument("input_file", type=str, help="..")
+# Parametro opcional de la base
+parser.add_argument(
+    "--base", choices=["A", "T", "G", "C"], help="Escoge una base nitrogenada")
+# Parametro opcional para imprimir todos
+parser.add_argument("--todo", type=str, help="..")
+
+args = parser.parse_args()
+
+# Aqui subimos el archivo y lo llamamos "string"
+with open(args.input_file, "r") as string:
+    # Convertimos el archivo a una string llamada "sec"
+    sec = str(string.readline())
+
+    A = 0
+    T = 0
+    G = 0
+    C = 0
+    # Usamos contadores para cada tipo de base
+    for base in sec:
+        if base == "A":
+            A += 1
+        if base == "T":
+            T += 1
+        if base == "G":
+            G += 1
+        if base == "C":
+            C += 1
+    # Si se agrego el parametro todo, imprime
+    if args.todo:
+        print(f"El numero de bases son:\nA:{A}\nT:{T}\nG:{G}\nC:{C}")
+    # Si se agrego el parametro base, imprime el texto de acuerdo a la base pedida
+    if args.base:
+        if args.base == "A":
+            print(f"La base {args.base} se repite {A} veces")
+        if args.base == "T":
+            print(f"La base {args.base} se repite {T} veces")
+        if args.base == "G":
+            print(f"La base {args.base} se repite {G} veces")
+        if args.base == "C":
+            print(f"La base {args.base} se repite {C} veces")
 ```
 
 "Se introduce archivo.txt con la secuencia de bases nitrogenadas esctritas como "A", "T", "G" o "C" y se regresa la cantidad de cada una de las bases presentes en la secuencia. 
@@ -52,13 +80,8 @@ with open("Secuencia.txt","r") as string: #Aqui subimos el archivo y lo llamamos
 
 #### Caso de uso:
 
-```
-Entra documento ---> Lee cada uno de los caracteres ---> Regresa cantidad de bases
-
-```
-
 - **Actor**: Usuario
-- **Descripción**: "Se introduce el documento en el archivo, posteriormente se ejecuta y el resultado arrojará cada una de las bases nitrogenadas y la cantidad de ellas."
+- **Descripción**: "El usuario proporciona el archivo con la secuencia de DNA con los caracteres A,T,G,C (únicamente ellos), posteriormente se ejecuta y el resultado arrojará ya sea la base nitrogenada de interés y la cantidad o cada una de las bases y la cantidad presente."
 - **Flujo principal**:
 
 	1. El actor inicia el sistema proporcionando el archivo de entrada.
@@ -67,5 +90,7 @@ Entra documento ---> Lee cada uno de los caracteres ---> Regresa cantidad de bas
 	4. El sistema muestra el resultado.
 	
 - **Flujos alternativos**: "Excepciones"
+  - Si el archivo proporcionado no existe.
+  		1. Se muestra mensaje de error por default.
 
                 

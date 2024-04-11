@@ -9,18 +9,20 @@ El script recibirá una archivo .txt con la secuencia de bases nitrogenadas.
 
 ## Salida
 
-El script imprimirá la cantidad que hay de cada tipo de base en la secuencia en la consola.
+El script imprimirá la cantidad que hay de cada tipo de base en la secuencia en la consola o en su defecto de una en específico preguntada por el usuario
 
 ## Control de errores
 
-Si el archivo proporcionado no existe, el script generara un mensaje de error. Del mismo modo, si el archivo contiene entradas que no son numeros, el script generara un error.
+Si el archivo proporcionado no existe se genera mensaje de error por default.
 
 ## Pruebas
 
 El script incluye un conjunto de pruebas unitarias. Puede ejecutar estas pruebas con:
 
 ```
-codigo pruebas
+Crea archivo .txt con una cadena de DNA con 2 "A".
+Introduce el archivo e ingresa "--base A"
+Se debe imprimir "La base A se repite 2 veces". 
 ```
 
 ## Datos
@@ -31,17 +33,17 @@ El script esta creado para operar en archivos .txt
 
 Este README ofrece informacion de uso basico. Para obtener informacion mas detallada sobre el como se hizo y la implementacion del script, consulte [Enlace a la documentacion].
 
-## Codigo fuente
+## Código fuente
 
-El codigo fuente esta disponible en este repositorio. Se acoge con satisfaccion cualquier contribucion o sugerencia a traves de solicitudes pull request.
+El código fuente esta disponible en este repositorio. Se acoge con satisfaccion cualquier contribución o sugerencia a través de solicitudes pull request.
 
-## Terminos de uso
+## Términos de uso
 
 Este script esta disponible bajo la licencia [nombre de la licencia]. Consulte el archivo LICENSE para obtener mas detalles.
 
 ## Como citar
 
-Si utiliza este script en su trabajo, por favor cite: [informacion de citacion].
+Si utiliza este script en su trabajo, por favor cite: [información de citacion].
 
 ## Contactenos
 
