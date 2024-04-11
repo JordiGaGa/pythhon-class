@@ -7,17 +7,21 @@ Fecha: 21/03/2024
 - Jordi Garcia Garces <email:jordigg@lcg.unam.mx>
 
 ## Descripcion del Problema
-Cuenta las ocurrencias de los símbolos "A","T","G","C" de una cadena de DNA que lea a través de un archivo. 
+En este programa se cuentan las ocurrencias de los símbolos "A","T","G","C" de una cadena de DNA brindada a través de un archivo en formato .txt, además de que puede imprimir todos o únicamente el de interés del usuario. Esto nace a raíz de la necesidad de saber el número de bases nitrogenadas en una secuencia de DNA de interés 
 
 
 ## Especificacion de Requisitos
 Requisitos funcionales:
 
+- Leer las letras A,T,G,C de un archivo dado en formato de string. 
+- Calcular la cantidad de bases que se repiten de cada tipo.
+
 - Archivo .txt con secuencia de bases nitrogenadas representadas por los caracteres "A", "T", "G" o "C".
 
 Requisitos no funcionales:
+- Si quieres que te regrese una base en especifico poner: --base X (siendo X A,T,G o C).
+- Si quieres saber cuantos nucleótidos había de todo tipo entonces poner: --todo X (Siendo x cualquier string)
 
--
 
 ## Análisis y Esquema
 
