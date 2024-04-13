@@ -7,18 +7,20 @@ Fecha: 21/03/2024
 - Jordi Garcia Garces <email:jordigg@lcg.unam.mx>
 
 ## Descripcion del Problema
-En este programa se cuentan las ocurrencias de los símbolos "A","T","G","C" de una cadena de DNA brindada a través de un archivo en formato .txt, además de que puede imprimir todos o únicamente el de interés del usuario. Esto nace a raíz de la necesidad de saber el número de bases nitrogenadas en una secuencia de DNA de interés 
+En este programa se cuentan las ocurrencias de los símbolos "A","T","G","C" de una cadena de DNA brindada a través de un archivo en formato .txt, además de que puede imprimir todos o únicamente una que resulte de interés al usuario. Esto nace a raíz de la necesidad de saber el número de bases nitrogenadas en una secuencia de DNA de interés 
 
 
 ## Especificacion de Requisitos
 Requisitos funcionales:
-
+- Programa desarrollado en python.
 - Leer las letras A,T,G,C de un archivo dado en formato de string. 
-- Calcular la cantidad de bases que se repiten de cada tipo.
+- Calcular la cantidad de bases que se repiten de cada tipo guardadas en variables independientes.
 - Desplegar el resultado en forma de texto con las cifras y la respectiva base.
 
 Requisitos no funcionales:
 - Si quieres que te regrese una base en especifico poner: --base X (siendo X A,T,G o C).
+- Programa adherido a los lineamientos de PEP8.
+- Se hace uso de la librería argparse de python para la entrada de argumentos. 
 - Si quieres saber cuantos nucleótidos había de todo tipo entonces poner: --todo X (Siendo x cualquier string)
 
 
@@ -28,20 +30,6 @@ Para este problema se usaron ciertas funciones de python, así como el establece
 A continuación, se muestra un pseudocódigo simple para ilustrar la logica básica del script:
 
 ```
-import argparse
-# Programa
-parser = argparse.ArgumentParser(description="contador ATGC")
-# Archivo como parametro obligatorio
-parser.add_argument("input_file", type=str, help="..")
-# Parametro opcional de la base
-parser.add_argument(
-    "--base", choices=["A", "T", "G", "C"], help="Escoge una base nitrogenada")
-# Parametro opcional para imprimir todos
-parser.add_argument("--todo", type=str, help="..")
-
-args = parser.parse_args()
-
-# Aqui subimos el archivo y lo llamamos "string"
 with open(args.input_file, "r") as string:
     # Convertimos el archivo a una string llamada "sec"
     sec = str(string.readline())

@@ -8,7 +8,7 @@ VERSION: 1.0
 AUTHOR: JORDI GARCIA GARCES
 
 
-DESCRIPTION: Programa para contar el numero de cada base nitrgoenada en archivo .txt
+DESCRIPTION: Programa para contar el número de cada base nitrgoenada en archivo .txt
 
 
 CATEGORY
