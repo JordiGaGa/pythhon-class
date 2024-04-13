@@ -20,11 +20,17 @@ A continuación, presentamos los detalles de los casos de prueba. Cada caso de p
 - Datos de entrada: Archivo.txt
 - Resultado esperado: Que se acepta el archivo.  
 
-### Caso de prueba x: Comprobación de funcionamiento
+### Caso de prueba 2: Comprobación de funcionamiento
 
 - Descripción: "Verificar que se lea el archivo"
-- Datos de entrada: Archivo .txt con la secuencia de bases.
-- Resultado esperado: Cantidad de bases nitrogenadas.
+- Datos de entrada: Archivo .txt con la secuencia de bases (únicamente caracteres A,T,G,C).
+- Resultado esperado: Cantidad de bases nitrogenadas de todos ellos como cadena de texto.
+
+### Caso de prueba 3: Base específica
+- Descripción: "Verificar que se puede obtener base específica"
+- Datos de entrada: Ya introducido el archivo agrega --base A.
+- Resultado esperado: Se debe arrojar el número de beses que aparece el caracter A en la secuencia 
+
 
 
         

@@ -17,7 +17,7 @@ Si el archivo proporcionado no existe se genera mensaje de error por default.
 
 ## Pruebas
 
-El script incluye un conjunto de pruebas unitarias. Puede ejecutar estas pruebas con:
+Puede ejecutar estas pruebas con:
 
 ```
 Crea archivo .txt con una cadena de DNA con 2 "A".
@@ -47,5 +47,5 @@ Si utiliza este script en su trabajo, por favor cite: [información de citacion]
 
 ## Contactenos
 
-Si tiene problemas o preguntas, por favor abra un problema en este repositorio o pongase en contacto con nosotros en: [informacion de contacto].
+Si tiene problemas o preguntas, por favor abra un problema en este repositorio o pongase en contacto con nosotros en: jordigg@lcg.unam.mx.
 

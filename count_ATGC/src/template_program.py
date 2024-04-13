@@ -9,25 +9,27 @@ AUTHOR: JORDI GARCIA GARCES
 
 
 DESCRIPTION: Programa para contar el número de cada base nitrgoenada en archivo .txt
+    Archivo de entrada   
+        CRuta a larchivo con la secuencia a introducir.
+        
+    -- base
+        Nucleótido a contar.
+    --todo 
+        Si se desea que se impriman todas las bases
 
 
-CATEGORY
+Ejemplos
+    
+        python count_atgc.py archivo.txt
+        python count_atgc.py archivo.txt --base A
+        python count_atgc.py archivo.txt --todo yes
 
 
 USAGE
 
     python contador_ATGC [-parameters] [value]
-
-
-ARGUMENTS
-
-
-METHOD
-
-
-SEE ALSO
 """
-
+# Librería
 import argparse
 # Programa
 parser = argparse.ArgumentParser(description="contador ATGC")
