@@ -30,37 +30,74 @@ Para este problema se usaron ciertas funciones de python, así como el establece
 A continuación, se muestra un pseudocódigo simple para ilustrar la logica básica del script:
 
 ```
-with open(args.input_file, "r") as string:
-    # Convertimos el archivo a una string llamada "sec"
-    sec = str(string.readline())
+# Librería
+import argparse
+# Programa
+parser = argparse.ArgumentParser(description="contador ATGC")
+# Archivo como parametro opcional
+parser.add_argument("--input", 
+                    type=str, 
+                    help="Archivo con secuencia de DNA", 
+                    required = False)
+# Parametro opcional de la secuencia 
+parser.add_argument("--secuencia",
+                    type=str,
+                    help="Secuencia de DNA",
+                    required= False)
+# Parametro opcional de la base a conocer
+parser.add_argument("--base", 
+                    choices=["A", "T", "G", "C"], 
+                    help="Escoge una base nitrogenada",
+                    required = False)
 
-    A = 0
-    T = 0
-    G = 0
-    C = 0
-    # Usamos contadores para cada tipo de base
-    for base in sec:
-        if base == "A":
-            A += 1
-        if base == "T":
-            T += 1
-        if base == "G":
-            G += 1
-        if base == "C":
-            C += 1
-    # Si se agrego el parametro todo, imprime
-    if args.todo:
-        print(f"El numero de bases son:\nA:{A}\nT:{T}\nG:{G}\nC:{C}")
-    # Si se agrego el parametro base, imprime el texto de acuerdo a la base pedida
-    if args.base:
-        if args.base == "A":
-            print(f"La base {args.base} se repite {A} veces")
-        if args.base == "T":
-            print(f"La base {args.base} se repite {T} veces")
-        if args.base == "G":
-            print(f"La base {args.base} se repite {G} veces")
-        if args.base == "C":
-            print(f"La base {args.base} se repite {C} veces")
+args = parser.parse_args()
+
+#Funcion para conformar si el archivo tiene otro tipo de elementos 
+def contenido(secuencia):
+    caractres_validos = set("ATGC")
+    for base in secuencia:
+        if base not in caractres_validos:
+            print(f"Caracter {base} es invalido")
+            return(False)
+    return(True)
+#En caso de no haber ingresado ninguna entrada
+if args.input == None and args.secuencia == None:
+    print("No introduciste nada")
+    exit()
+
+#En caso de haber ingresado un odcumento
+if args.input:
+    try:
+# Aqui subimos el archivo y lo llamamos "string"
+        with open(args.input, "r") as string:
+            # Convertimos el archivo a una string llamada "sec"
+            sec = string.read().upper()
+#En caso de algun error con el archivo regresa este mensaje
+    except FileNotFoundError as fnf_error:
+            print(f"El archivo {fnf_error.filename} no existe. \n")
+            exit()
+# En caso de haber ingresado una cadena de caracteres
+if args.secuencia:
+     sec = args.secuencia.upper()
+    
+#Se va a la funcion a analizar la entrada
+confirmacion = contenido(sec)
+
+#Posterior a haber ebtrado a la funcion confirmacion
+try:
+    if confirmacion == False:
+        raise Exception(f"El archivo no es una secuancia de DNA")
+except Exception as  message:
+    print(message)
+    exit()
+
+# En caso de haber agregado parametro "base"
+if args.base:
+    print(f"{args.base}: {sec.count(args.base)}")
+        
+# En caso de no haber agregado parametro base imprime todos
+else: 
+    print(f"A: {sec.count("A")}\nT: {sec.count("T")}\nG: {sec.count("G")}\nC: {sec.count("C")}")
 ```
 
 "Se introduce archivo.txt con la secuencia de bases nitrogenadas esctritas como "A", "T", "G" o "C" y se regresa la cantidad de cada una de las bases presentes en la secuencia. 
