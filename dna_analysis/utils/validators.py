@@ -75,3 +75,7 @@ def check_sequence_length(sequence, min_length=100):
     if len(sequence) < min_length:
         raise ValueError(f"La secuencia debe tener al menos {min_length} bases.")
     return True
+
+if __name__ == "__main__":
+    seq = "ATGCATCAG"
+    assert(validate_dna_sequence(seq)) == True
