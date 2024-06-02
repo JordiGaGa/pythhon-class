@@ -1,6 +1,12 @@
 import Bio.Seq
-import re 
+import re
+from Bio.Seq import Seq
+from Bio.SeqUtils import molecular_weight
+from Bio import SeqUtils
 
+"""
+Clase 1
+"""
 #String pasada a objeto seq
 seq_obj = Bio.Seq.Seq('ATGCGTGATTGAATC')
 
@@ -26,3 +32,20 @@ print(f'La cadena de RNA regresada a DNA es {retrna}')
 #  Se imprime cada codon por separado 
 for codon in re.findall(r"(.{3})", str(seq_obj)):
     print(codon)
+
+
+"""
+Clase 2
+"""
+
+pattern = Seq("ACG")
+
+sequence = Seq("ATGCGCGACGGCGTGATCAGCTTATAGCCGTACGACTGCTGC")
+
+results = SeqUtils.nt_search(str(sequence),pattern)
+
+print(results)
+
+PM = molecular_weight("ATGC") # peso molecular
+
+print(PM)
