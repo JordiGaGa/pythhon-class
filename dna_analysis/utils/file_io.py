@@ -10,7 +10,7 @@ Funciones:
     
 Ejemplos de uso están disponibles en el bloque principal del módulo.
 
-Autores: [Tu Nombre]
+Autores: [Tu Nombre] Añade tu nombre! 
 Versión: 1.0
 """
 
