@@ -45,3 +45,14 @@ def mile_to_km(mile_array):
     km_array = mile_array * 1.609
 
     return km_array
+
+# ===========================================================================
+# =                            test
+# ===========================================================================
+
+if __name__ == "__main__":
+    # Prueba de funcionalidad.
+    test_array_kg = np.array([1, 2, 3, 4, 5])
+    print(f"El array original: {test_array_kg} \npasado de kg a Libras: {km_to_mile(test_array_kg)}")
+    test_array_lb = km_to_mile(test_array_kg)
+    print(f"El array original: {test_array_lb} \npasado de libras a kg: {mile_to_km(test_array_lb)}")
