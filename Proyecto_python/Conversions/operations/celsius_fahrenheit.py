@@ -46,3 +46,14 @@ def F_to_C(F_array):
     C_array = (F_array - 32) * 5/9
 
     return C_array
+
+# ===========================================================================
+# =                            test
+# ===========================================================================
+
+if __name__ == "__main__":
+    # Prueba de funcionalidad.
+    test_array_kg = np.array([0, 20, 25, 30, 35, 40])
+    print(f"El array original: {test_array_kg} \npasado de kg a Libras: {C_to_F(test_array_kg)}")
+    test_array_lb = C_to_F(test_array_kg)
+    print(f"El array original: {test_array_lb} \npasado de libras a kg: {F_to_C(test_array_lb)}")
