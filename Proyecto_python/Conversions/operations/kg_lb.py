@@ -45,3 +45,14 @@ def lb_to_kg(lb_array):
     kg_array = lb_array / 2.205
 
     return kg_array
+
+# ===========================================================================
+# =                            test
+# ===========================================================================
+
+if __name__ == "__main__":
+    # Prueba de funcionalidad.
+    test_array_kg = np.array([1, 2, 3, 4, 5])
+    print(f"El array original: {test_array_kg} \npasado de kg a Libras: {kg_to_lb(test_array_kg)}")
+    test_array_lb = kg_to_lb(test_array_kg)
+    print(f"El array original: {test_array_lb} \npasado de libras a kg: {lb_to_kg(test_array_lb)}")
