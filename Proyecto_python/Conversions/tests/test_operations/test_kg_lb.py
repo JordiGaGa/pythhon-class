@@ -4,7 +4,7 @@ from Conversions.operations.kg_lb import kg_to_lb, lb_to_kg
 
 class TestConversionFunctions(unittest.TestCase):
     """
-    Clase de pruebas unitarias para las funciones `kg_to_lb` y `lb_to_kg` del módulo `at_content`.
+    Clase de pruebas unitarias para las funciones `kg_to_lb` y `lb_to_kg` del módulo `operations.kg_lb`.
     Esta clase contiene métodos para probar la correcta conversión de kilogramos a libras y viceversa,
     incluyendo el manejo correcto de entradas de arrays de numpy.
     
