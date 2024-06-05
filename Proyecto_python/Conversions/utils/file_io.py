@@ -91,7 +91,7 @@ def arrays_to_file(file_name, array_1, array_2):
     """
     try:
         matrix = np.column_stack((array_1, array_2))
-        with open(file_name, 'a') as file:
+        with open(file_name, 'w') as file:
             for row in matrix:
                 file.write(f"{row[0]}\t{row[1]}\n")
     except IOError:
