@@ -29,6 +29,7 @@ def C_to_F(C_array):
     Returns:
         F_array (array): Valores que se van a transformaron a °Fahrenheit.
     """
+  
     F_array = (C_array * 9/5) + 32 
 
     return F_array
