@@ -120,16 +120,16 @@ Siendo que los datos estan divididos de la siguiente manera: "original  transfor
 - Datos de entrada:
   ```
 	Archivo con los siguientes datos:
-	    "0.621 1.243 1.864 2.486 3.107"
+	    "0.62150404 1.24300808 1.86451212 2.48601616 3.1075202"
     Conversion: kg-lb
   ```
 - Resultado esperado archivo con la siguiente informacion:
 ```
-0.621 1
-1.243 2
-1.864 3
-2.486 4
-3.107 5
+0.62150404 1
+1.24300808 2
+1.86451212 3
+2.48601616 4
+3.1075202  5
 ```
 Siendo que los datos estan divididos de la siguiente manera: "original  transformado"
 
