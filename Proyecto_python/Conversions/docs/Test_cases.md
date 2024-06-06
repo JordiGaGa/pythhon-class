@@ -13,9 +13,9 @@ La ejecución exitosa de estos casos de prueba asegura que el script está listo
 A continuación, presentamos los detalles de los casos de prueba. Cada caso de prueba incluye una descripción del caso de prueba, los datos de entrada utilizados y el resultado esperado.
     
     
-### Caso de prueba 1: Comprobación de la conversion de °C a °F
-
-- Descripción: Verificar que el script puede transformar de manera adeucada varios valores numericos de celsius a fahrenheit.
+### Caso de prueba 1: Comprobacion de la conversion de °C a °F
+ 
+- Descripcion: Verificar que el script puede transformar de manera adeucada varios valores numericos de celsius a fahrenheit.
 - Datos de entrada:
   ```
 	Archivo con los siguientes datos:
@@ -25,19 +25,19 @@ A continuación, presentamos los detalles de los casos de prueba. Cada caso de p
 - Resultado esperado archivo con la siguiente informacion:
 
 ```
-0  32.
-20  68.
-25  77.
-30  86.
-35  95.
+0    32
+20   68
+25   77
+30   86
+35   95
 40  104
 ```
 
 Siendo que los datos estan divididos de la siguiente manera: "original  transformado"
 
-### Caso de prueba 2: Comprobación de la conversion de °F a °C
+### Caso de prueba 2: Comprobacion de la conversion de °F a °C
 
-- Descripción: Verificar que el script puede transformar de manera adeucada varios valores numericos de fahrenheit a celsius.
+- Descripcion: Verificar que el script puede transformar de manera adeucada varios valores numericos de fahrenheit a celsius.
 - Datos de entrada:
   ```
 	Archivo con los siguientes datos:
@@ -47,19 +47,19 @@ Siendo que los datos estan divididos de la siguiente manera: "original  transfor
 - Resultado esperado archivo con la siguiente informacion:
 
 ```
-32.  0
-68.  20
-77.  25
-86.  30
-95.  35
+32    0
+68   20
+77   25
+86   30
+95   35
 104  40
 ```
 
 Siendo que los datos estan divididos de la siguiente manera: "original  transformado"
 
-### Caso de prueba 3: Comprobación de la conversion de kg a libra
+### Caso de prueba 3: Comprobacion de la conversion de kg a libra
 
-- Descripción: Verificar que el script puede transformar de manera adeucada varios valores numericos de kg a libra.
+- Descripcion: Verificar que el script puede transformar de manera adeucada varios valores numericos de kg a libra.
 - Datos de entrada:
   ```
 	Archivo con los siguientes datos:
@@ -76,11 +76,66 @@ Siendo que los datos estan divididos de la siguiente manera: "original  transfor
 ```
 Siendo que los datos estan divididos de la siguiente manera: "original  transformado"
 
+### Caso de prueba 4: Comprobacion de la conversion de libra a kg
 
+- Descripcion: Verificar que el script puede transformar de manera adeucada varios valores numericos de libra a kg.
+- Datos de entrada:
+  ```
+	Archivo con los siguientes datos:
+	    "2.205 4.41 6.615 8.82 11.025"
+    Conversion: lb-kg
+  ```
+- Resultado esperado archivo con la siguiente informacion:
+```
+2.205  1
+4.41   2
+6.615  3
+8.82   4
+11.025 5
+```
+Siendo que los datos estan divididos de la siguiente manera: "original transformado"
 
-### Caso de prueba 7: Comprobación de error para cuando el archivo introducido esta vacío
+### Caso de prueba 5: Comprobacion de la conversion de km a millas
 
-- Descripción: Verificar que el script maneja correctamente los archivos vacíos.
+- Descripcion: Verificar que el script puede transformar de manera adeucada varios valores numericos de km a millas.
+- Datos de entrada:
+  ```
+	Archivo con los siguientes datos:
+	    "1 2 3 4 5"
+    Conversion: km-millas
+  ```
+- Resultado esperado archivo con la siguiente informacion:
+```
+1 0.621
+2 1.243
+3 1.864
+4 2.486
+5 3.107
+```
+Siendo que los datos estan divididos de la siguiente manera: "original  transformado"
+
+### Caso de prueba 6: Comprobacion de la conversion de millas a km
+
+- Descripcion: Verificar que el script puede transformar de manera adeucada varios valores numericos de millas a km.
+- Datos de entrada:
+  ```
+	Archivo con los siguientes datos:
+	    "0.621 1.243 1.864 2.486 3.107"
+    Conversion: kg-lb
+  ```
+- Resultado esperado archivo con la siguiente informacion:
+```
+0.621 1
+1.243 2
+1.864 3
+2.486 4
+3.107 5
+```
+Siendo que los datos estan divididos de la siguiente manera: "original  transformado"
+
+### Caso de prueba 7: Comprobacion de error para cuando el archivo introducido esta vacío
+
+- Descripcion: Verificar que el script maneja correctamente los archivos vacíos.
 - Datos de entrada:
 	```
     Archivo sin contenido.
@@ -91,9 +146,9 @@ Siendo que los datos estan divididos de la siguiente manera: "original  transfor
             ValueError: El archivo esta vacio.
 		2.- Termina el programa.
 
-### Caso de prueba 8: Comprobación de error para caracteres no validos introducidos dentro del archivo
+### Caso de prueba 8: Comprobacion de error para caracteres no validos introducidos dentro del archivo
 
-- Descripción: Verificar que el script maneja correctamente archivos con caracteres no validos al ejecutar el programa.
+- Descripcion: Verificar que el script maneja correctamente archivos con caracteres no validos al ejecutar el programa.
 - Datos de entrada:
 	```
 	Archivo con los siguientes datos:
