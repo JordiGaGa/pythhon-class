@@ -9,10 +9,10 @@ El paquete acepta un script que contenga unicamente los numeros a tratar, ya sea
 sola columna.
 
 ```
-python conversions.py -inputfile [archivo] -type_conversion [str] str: contiene uno de los siguientes ejemplos: C-F, F-C, kg-lb, lb-kg, km-mile, mile-km.
+python conversions.py -inputfile [archivo] -type_conversion [conversions] str: contiene uno de los siguientes ejemplos: C-F, F-C, kg-lb, lb-kg, km-mile, mile-km.
 ```
 
-donde `[archivo]` es el nombre del archivo que contiene los valores a manipular y `[str]` contiene el tipo de conversion a realizar conforme a los parametros puestos.
+donde `[archivo]` es el nombre del archivo que contiene los valores a manipular y `[conversions]` contiene el tipo de conversion a realizar conforme a los parametros puestos.
 
 ## Salida
 
@@ -27,9 +27,12 @@ Si el archivo proporcionado esta vacio, se generara un mensaje de error.
 El paquete incluye un conjunto de pruebas unitarias. Puede ejecutar estas pruebas con:
 
 ```
-python -m test_celcius_fahrenheit.py
-python -m test_kg_lb.py
-python -m test_km_mile.py
+python -m Conversions.test.operations.test_celcius_fahrenheit
+python -m Conversions.test.operations.test_kg_lb
+python -m Conversions.test.operations.test_km_mile
+python -m Conversions.test.operations.test_kg_lb
+python -m Conversions.test.utils.test_file_io
+python -m Conversions.test.utils.test_validations
 ```
 
 ## Datos
@@ -38,7 +41,7 @@ El paquete esta diseñado para operar en archivos de texto plano, con un numeros
 
 ## Metadatos y documentacion
 
-Este README ofrece informacion de uso basico. Para obtener informacion mas detallada sobre el paquete y la implementacion consulte [user_manual].
+Este README ofrece informacion de uso basico. Para obtener informacion mas detallada sobre el paquete y la implementacion consulte [user_manual](https://github.com/JordiGaGa/pythhon-class/blob/main/Proyecto_python/Conversions/docs/user_manual).
 
 ## Codigo fuente
 
@@ -46,9 +49,9 @@ El codigo fuente esta disponible en este repositorio. Se acoge con satisfaccion 
 
 ## Terminos de uso
 
-Este paquete esta disponible bajo la licencia [MIT License]. Consulte el archivo LICENSE para obtener mas detalles.
+Este paquete esta disponible bajo la licencia [MIT License](https://github.com/JordiGaGa/pythhon-class/blob/main/Proyecto_python/LICENSE). Consulte el archivo LICENSE para obtener mas detalles.
 
 
 ## Contactenos
 
-Si tiene problemas o preguntas, por favor abra un problema en este repositorio o póngase en contacto con nosotros en Git hub: [JordiGaGa, Jocelyn-TG].
+Si tiene problemas o preguntas, por favor abra un problema en este repositorio o póngase en contacto con nosotros en Git hub: [JordiGaGa](https://github.com/JordiGaGa) & [Jocelyn-TG](https://github.com/Jocelyn-TG).
