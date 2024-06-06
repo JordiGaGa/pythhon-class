@@ -17,32 +17,46 @@ A continuación, presentamos los detalles de los casos de prueba. Cada caso de p
 
 - Descripción: Verificar que el script puede transformar de manera adeucada varios valores numericos de celsius a fahrenheit.
 - Datos de entrada: 
-		Archivo con los siguientes datos:
-    "0 20 25 30 35 40"
+	Archivo con los siguientes datos:
+		"0 20 25 30 35 40"
     Conversion: C-F
 - Resultado esperado archivo con la siguiente informacion:
+
      "0  32.
+
       20  68.
+
       25  77.
+
       30  86.
+
       35  95.
+
       40  104"
+
 Siendo que los datos estan divididos de la siguiente manera: "original  transformado"
 
 ### Caso de prueba 2: Comprobación de la conversion de °F a °C
 
 - Descripción: Verificar que el script puede transformar de manera adeucada varios valores numericos de fahrenheit a celsius.
 - Datos de entrada: 
-		Archivo con los siguientes datos:
-    "32. 68. 77. 86. 95. 104"
+	Archivo con los siguientes datos:
+	    "32. 68. 77. 86. 95. 104"
     Conversion: F-C
 - Resultado esperado archivo con la siguiente informacion:
-     "32.  0 
-      68.  20 
+
+     "32.  0
+
+      68.  20
+
       77.  25
+
       86.  30
+
       95.  35
+
       104  40"
+
 Siendo que los datos estan divididos de la siguiente manera: "original  transformado"
 
 ### Caso de prueba 3: Comprobación de la conversion de kg a libra
@@ -53,16 +67,23 @@ Siendo que los datos estan divididos de la siguiente manera: "original  transfor
     "1 2 3 4 5"
     Conversion: kg-lb
 - Resultado esperado archivo con la siguiente informacion:
+
      "1  2.205
-      2  4.41 
+
+      2  4.41
+
       3  6.615
-      4  8.82 
+
+      4  8.82
+
       5  11.025"
+
 Siendo que los datos estan divididos de la siguiente manera: "original  transformado"
 
 
 
 ### Caso de prueba 7: Comprobación de error para cuando el archivo introducido esta vacío
+
 - Descripción: Verificar que el script maneja correctamente los archivos vacíos.
 - Datos de entrada:
     Archivo sin contenido.
@@ -73,6 +94,7 @@ Siendo que los datos estan divididos de la siguiente manera: "original  transfor
 		2.- Termina el programa.
 
 ### Caso de prueba 8: Comprobación de error para caracteres no validos introducidos dentro del archivo
+
 - Descripción: Verificar que el script maneja correctamente archivos con caracteres no validos al ejecutar el programa.
 - Datos de entrada: 
 		Archivo con los siguientes datos:
