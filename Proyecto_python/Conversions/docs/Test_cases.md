@@ -16,68 +16,64 @@ A continuación, presentamos los detalles de los casos de prueba. Cada caso de p
 ### Caso de prueba 1: Comprobación de la conversion de °C a °F
 
 - Descripción: Verificar que el script puede transformar de manera adeucada varios valores numericos de celsius a fahrenheit.
-- Datos de entrada: 
+- Datos de entrada:
+  ```
 	Archivo con los siguientes datos:
 		"0 20 25 30 35 40"
     Conversion: C-F
+  ```
 - Resultado esperado archivo con la siguiente informacion:
 
-     "0  32.
-
-      20  68.
-
-      25  77.
-
-      30  86.
-
-      35  95.
-
-      40  104"
+```
+0  32.
+20  68.
+25  77.
+30  86.
+35  95.
+40  104
+```
 
 Siendo que los datos estan divididos de la siguiente manera: "original  transformado"
 
 ### Caso de prueba 2: Comprobación de la conversion de °F a °C
 
 - Descripción: Verificar que el script puede transformar de manera adeucada varios valores numericos de fahrenheit a celsius.
-- Datos de entrada: 
+- Datos de entrada:
+  ```
 	Archivo con los siguientes datos:
 	    "32. 68. 77. 86. 95. 104"
     Conversion: F-C
+  ```
 - Resultado esperado archivo con la siguiente informacion:
 
-     "32.  0
-
-      68.  20
-
-      77.  25
-
-      86.  30
-
-      95.  35
-
-      104  40"
+```
+32.  0
+68.  20
+77.  25
+86.  30
+95.  35
+104  40
+```
 
 Siendo que los datos estan divididos de la siguiente manera: "original  transformado"
 
 ### Caso de prueba 3: Comprobación de la conversion de kg a libra
 
 - Descripción: Verificar que el script puede transformar de manera adeucada varios valores numericos de kg a libra.
-- Datos de entrada: 
-		Archivo con los siguientes datos:
-    "1 2 3 4 5"
+- Datos de entrada:
+  ```
+	Archivo con los siguientes datos:
+	    "1 2 3 4 5"
     Conversion: kg-lb
+  ```
 - Resultado esperado archivo con la siguiente informacion:
-
-     "1  2.205
-
-      2  4.41
-
-      3  6.615
-
-      4  8.82
-
-      5  11.025"
-
+```
+1  2.205
+2  4.41
+3  6.615
+4  8.82
+5  11.025
+```
 Siendo que los datos estan divididos de la siguiente manera: "original  transformado"
 
 
@@ -86,8 +82,10 @@ Siendo que los datos estan divididos de la siguiente manera: "original  transfor
 
 - Descripción: Verificar que el script maneja correctamente los archivos vacíos.
 - Datos de entrada:
+	```
     Archivo sin contenido.
     Cualquier conversion ej. F-C
+	```
 - Resultado esperado: 
 		1.- Regresa un error:
             ValueError: El archivo esta vacio.
@@ -96,10 +94,12 @@ Siendo que los datos estan divididos de la siguiente manera: "original  transfor
 ### Caso de prueba 8: Comprobación de error para caracteres no validos introducidos dentro del archivo
 
 - Descripción: Verificar que el script maneja correctamente archivos con caracteres no validos al ejecutar el programa.
-- Datos de entrada: 
-		Archivo con los siguientes datos:
-			"0 15 20 30 40 a 60"
-		Cualquier conversion ej. F-C
+- Datos de entrada:
+	```
+	Archivo con los siguientes datos:
+		"0 15 20 30 40 a 60"
+	Cualquier conversion ej. F-C
+	 ```
 - Resultado esperado: 
 		1.- Regresa un error:
             ValueError: El archivo contiene caracteres no válidos (letras).
