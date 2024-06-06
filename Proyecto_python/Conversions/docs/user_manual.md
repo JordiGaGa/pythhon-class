@@ -48,3 +48,5 @@ El formato de los datos de entrada sera simplemente un archivo, este puede conte
 - **Flujos alternativos**:
 	- Si el archivo proporcionado esta vacio
 		1. El sistema muestra un mensaje de error.
+	- Si el archivo proporcionado contiene caracteres no validos (que no sean numeros, enteres, espacios o tabuladores)
+ 		1. El sistema muestra un mensaje de error.
